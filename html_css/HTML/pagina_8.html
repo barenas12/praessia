@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="get" autocomplete="off">
+        <!-- para usar el method="post" se debe hacer uso también
+          del action y tener un servidor a donde enviar la información, 
+         sino la página no cargará correctamente. Por ahora solo usar get-->
+        <fieldset>
+            <legend>Datos del usuario</legend>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre"><br>
+            <br>
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido" name="apellido"><br>
+            <br>
+
+            <label for="contraseña">Escriba su contraseña</label><br>
+            <input type="password" id="contraseña" name="contraseña"><br>
+            <br>
+
+            <!--vamos a realizar varios tipos de entreadas para formularios-->
+            <label for="edad">Escriba su edad</label><br>
+            <input type="number" id="edad" name="edad"><br>
+            <br>
+            <label for="nacimiento">Escriba hora</label><br>
+            <input type="time" id="nacimiento" name="nacimiento"><br>
+            <br>
+            <label for="nacimiento2">Escriba fecha y hora de nacimiento</label><br>
+            <input type="datetime-local" id="nacimiento2" name="nacimiento2"><br>
+            <br>
+            <label for="fecha">Escriba fecha de nacimiento</label>
+            <input type="date" id="fecha" name="fecha"><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Preguntas de la encuesta</legend>
+            <label for="color">Seleccione un color</label><br>
+            <input type="color" id="color" name="color"><br>
+            <br>
+            <label>Seleccione su lenguaje favorito:</label><br>
+            <input type="radio" id="HTML" name="favorito" value="HTML">
+            <label for="HTML">HTML</label><br>
+            <input type="radio" id="CSS" name="favorito" value="CSS">
+            <label for="CSS">CSS</label><br>
+            <input type="radio" id="Javascript" name="favorito" value="Javascript">
+            <label for="Javascript">Javascript</label><br>
+            <br>
+            <label>Seleccione los lenguajes que está estudiando en el momento:</label><br>
+            <input type="checkbox" id="HTML" name="lenguajes" value="HTML">
+            <label for="HTML">HTML</label><br>
+            <input type="checkbox" id="CSS" name="lenguajes" value="CSS">
+            <label for="CSS">CSS</label><br>
+            <input type="checkbox" id="Javascript" name="lenguajes" value="Javascript">
+            <label for="Javascript">Javascript</label><br>
+            <br>
+            <label for="estudiante">Que estudiante es?</label><br>
+            <input type="hidden" id="estudiante" name="color"><br>
+            <br>
+            <label for="correo">escriba su correo electrónico</label><br>
+            <input type="email" id="correo" name="correo"><br>
+            <br>
+            <label for="experiencia">Seleccione años de experiencia</label><br>
+            <input type="range" id="experiencia" name="experiencia"><br>
+            <br>
+            <label for="archivo">Seleccione un archivo para cargar</label><br>
+            <input type="file" id="archivo" name="archivo"><br>
+            <br>
+            <input type="button" value="alerta">
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpiar"><br>
+            <br>
+            <!--vamos a realizar listas de selección para formularios-->
+            <label>lenguajes de programación</label><br>
+            <select id="lenguajes2" name="lenguajes2">
+                <option value="html">HTML</option>
+                <option value="javascript">Javascript</option>
+                <option value="CSS">CSS</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+            </select><br>
+            <br>
+
+            <input list="lenguajes3" name="lenguajes3">
+            <datalist id="lenguajes3">
+                <option value="html"></option>
+                <option value="javascript"></option>
+                <option value="CSS"></option>
+                <option value="python"></option>
+                <option value="java"></option>
+            </datalist>
+        </fieldset>
+
+    </form>
+    <br>
+    <a href="index.html">volver a la página principal</a>
+</body>
+
+</html>

@@ -1,0 +1,471 @@
+h4 {
+    font-style: italic;
+    color: brown;
+    width: 20px;
+}
+
+/*vamos a identificar los diferentes tipos de selectores 
+para aplicar diseño en CSS*/
+
+/*selector de elementos*/
+
+
+/*selector de ID*/
+#titulo {
+    color: blueviolet;
+    width: 25px;
+}
+
+/*selector de clase*/
+.azul {
+    color:blue !important; /*el !important dará prioridad al diseño que yo elija, si hay varios*/
+}
+
+/*en este tambien se puede especificar la clase para cada elemento*/
+h2.importante{
+    color: orangered;
+}
+h3.importante{
+    color: green;
+}
+
+/*selector universal: se aplica a todos los elementos sin diseño previo
+*{
+    color: rgb(42, 52, 103);
+    font-style: inherit;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+*/
+.firstdiv{
+    margin: 20px 20px;
+    border-style: solid dashed none ridge;
+    border-color: green;
+    border-width: 15px;
+     /*ctrl + espace for more colors*/
+    padding: 5px 10px 15px 25px;
+    content: 14px;
+    
+}
+
+
+/*Vamos a aplicar formatos básicos de texto
+recordar que ára varios div se pueden usar clases o ID para especificar
+a cual aplicar el diseño*/
+
+.formatoText {
+    margin: auto;
+    padding: 15px; width: 400px ;
+    border: solid 5px;
+    border-radius: 10px;
+    background-color: aqua;
+    line-height: 25px;
+    text-align: justify;
+    text-indent: 25px;
+    
+}
+
+.tituloDiseño{
+    color: rgb(9, 40, 97);
+    word-spacing: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px purple;
+    text-decoration: overline black;
+    
+}
+
+/*Vamos a aplicar fuentes de texto, son 5 grupos principales:*/
+
+.fontDesign {
+    color: rgb(30, 207, 30) !important;
+    background-color: grey;
+    margin: auto;
+    padding: 40px;
+    width: 500px;
+    text-align: center;
+    border: solid;
+    border-color: rgb(149, 134, 48);
+    border-radius: 20px;
+    border-width: 15px;
+}
+
+.serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sans-serif {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cursive {
+    font-family: cursive;
+}
+
+.fantasy {
+    font-family: fantasy;
+}
+
+/*Vamos a definir los fondos para nuestras partes de la página web,
+recordar que estos fondos aplcan al Body, a un div, o a cualquier 
+parte que se desee*/
+
+.backgrounds {
+    height: 500px;
+    width: 500px;
+    background-color: rgb(165, 42, 42);
+    background-image: url('living-room.jpg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: scroll;
+
+    /*todo lo anterior se puede definir dentro de una misma linea, por ejemplo
+    background: rgb(165, 42, 42) url('living-room.jpg') no-repeat right top scroll
+    sería totalmente válido.
+    */
+}
+/*aprenderemos posicionamiento de cajas en un contenedor*/
+
+.contenedor div{
+    width: 100px;
+    height: 150px;
+    margin: 25px 25px;
+    padding: 25px 25px;
+    border-color: green;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 10px;
+    background-color: aqua;
+
+}
+
+.positioncard1{
+    width: 50px;
+    height: 75px;
+    background-color: gray;
+    border-color: yellowgreen;
+    bottom: 10px;
+    right: 0px;
+    position: absolute;
+    
+}
+
+.positioncard2{
+    top: 0px;
+    right: 0px;
+    position: sticky;
+}
+
+.positioncard3{
+    bottom: 10px;
+    right: 0px;
+    position: fixed;
+}
+
+/*vamos a definir que caja irá al frente y cual al fondo
+por medio de z-index*/
+
+.contenedor2 div{
+    position: relative;
+}
+
+.diva{
+    top: 300px;
+    right: 5px;
+    width: 30px;
+    height: 45px;
+    margin: 25px 25px;
+    padding: 25px 25px;
+    border-color: orangered;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 10px;
+    background-color: red;
+    position: relative;
+    z-index: 3;
+}
+
+.divb{
+    top: 100px;
+    right: 5px;
+    width: 20px;
+    height: 70px;
+    margin: 25px 25px;
+    padding: 25px 25px;
+    border-color: purple;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 10px;
+    background-color: peru;
+    position: relative;
+    z-index: 2;
+}
+
+.divc{
+    top: 10px;
+    right: 5px;
+    width: 90px;
+    height: 25px;
+    margin: 25px 25px;
+    padding: 25px 25px;
+    border-color: green;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 10px;
+    background-color: blue;
+    position: relative;
+    z-index: 1;
+}
+
+/*ahora vamos a aplicar la propiedad overflow para aplicar 
+barras de desplazamiento en la página o para cada contenedor o div*/
+
+div.overflow{
+    width: 200px;
+    height: 180px;
+    background-color: beige;
+    border: 3px solid black;
+    padding: 15px 15px;
+    margin: 40px;
+    overflow: auto;
+}
+
+/*Vamos a ver como ubicar un objeto con relación a otro, esto nos sirve
+para situar imágenes al lado de textos por ejemplo*/
+
+img{
+    width: 150px;
+    float: inherit;
+    margin: 20px;
+}
+div.float1{
+    width: 600px;
+    height: 500px;
+    border: 15px solid black;
+    padding:30px;
+    margin: auto;
+    background-color: rgba(144, 4, 4, 0.764);
+}
+
+div.float2{
+    width: 350px;
+    height: 200px;
+    border: 8px solid black;
+    padding: 20px;
+    margin: 15px;
+    background-color: rgba(50, 151, 209, 0.764);
+    float: left;
+    overflow: auto;
+}
+
+/*Ajora vamos a usar el flex box, con el cual vamos a poder dar posiciones
+organizadas a varios elementos dentro de un div*/
+
+div.pp {
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    background-color: bisque;
+    padding: 10px;
+    margin: auto;
+    display: flex;  /*cuando activo el display: flex, los elementos se organizan en relación con los demás*/
+    /*flex-direction: row;*/
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-around;
+    align-self: flex-start;
+    flex-wrap: wrap;
+}
+
+div.flex{
+    width: 40px;
+    height: 30px;
+    border: 5px solid black;
+    background-color: tomato;
+    padding: 5px;
+    margin: 20px;
+}
+
+/*vamos a aplicar algunas pseudoclases vamos a usar la pseudoclase hover
+para cambiar de color un cuadro de texto al poner el cursor sobre este*/
+
+div.pclass{
+    width: 150px;
+    height: 50px;
+    border: 10px solid black;
+    margin: auto;
+    padding: 20px;
+    color: black;
+    background-color: yellow;
+}
+
+div.pclass:hover{
+    background-color: red;
+    color: white;
+}
+
+p.hideText {
+    display: none;
+    border: 5px solid black;
+    color: black;
+    background-color: gray;
+}
+div:hover p.hideText{
+    display: block;
+}
+
+/*Ahora vamos a usar la pseudoclase focus, la cual se usa en los input*/
+
+input:focus{
+    background-color: gray;
+    color:black;
+}
+
+/*vamos a añadir iconos desde bootstrap y google fonts*/
+
+div.icon {
+    font-size: 70px;
+    color: blueviolet;
+}
+
+/*vamos a aplicar estilos a una tabla*/
+
+table, th, td{
+    width: 30%;
+    margin: auto;
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    color: #F0E7DA;
+    background-color: #6a2831;
+}
+
+tr:nth-child(even){
+    color: #6a2831;
+    background-color: #F0E7DA;
+}
+
+tr:nth-child(odd){
+    color: #F0E7DA;
+    background-color: #232324;
+}
+
+td:hover{
+    color: black;
+    background-color: rgb(246, 242, 4);
+}
+
+/*ahora vamos a aplicar estilos a una imagen*/
+
+.contenedor1 {
+    width: 75%;
+    position: relative;
+}
+
+img{
+    width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: gray;
+    transition: 1s ease;  
+    border-radius: 10px;
+}
+.contenedor1:hover .overlay{
+    opacity: 0.5;
+}
+
+/*IMPORTANTE: recordar que puedo aplicar un diseño al parrafo que yo quiera,
+ poniendo en la etiqueta <p> del HTML solo la clase despues del ".", así*/
+p.design{   
+    color: white;
+    font-size: 26px;
+    text-align: center;
+}
+
+/*Barra de navegación para la página web*/
+ul {
+    list-style-type: none;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #6a2831;
+    background-color: #F0E7DA;
+    text-align: center;
+    font-size: 20px;
+}
+
+li a:hover{
+    color: white;
+    background-color:black;
+}
+
+/*para finalizar se editan formularios y botones*/
+/*se puede seleccionar de la siguiente manera para editar solo ciertos campos, no todos*/
+input[type=text], input[type=password]{
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+input [type=text]:focus, input[type=password]:focus{
+    border: none;
+    background-color: gray;
+    outline:none;
+}
+
+label{
+    font-size: 24px;
+    margin: 10px;
+    padding: 10px;
+}
+
+input[type=reset], input[type=submit]{
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    background-color: purple;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+
+input[type=reset]:hover, input[type=submit]:hover{
+    background-color:palevioletred;
+    color:black
+}
+
+input[type=reset]:active, input[type=submit]:active{
+    background-color:green;
+    color:black
+}
