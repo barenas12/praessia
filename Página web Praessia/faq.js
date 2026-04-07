@@ -1431,3 +1431,56 @@ function resetQuiz() {
 }
 
 document.addEventListener("DOMContentLoaded", renderQuiz);
+
+
+
+/* ================================================
+   exploration.js
+   Animación fade-up para bloques de la página
+   ================================================ */
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(function (el) {
+    observer.observe(el);
+  });
+
+});
+
+/* ================================================
+   bienvenida_qr.js
+   Animación de entrada suave – Praessia
+   ================================================ */
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Elementos que entran en secuencia
+  const secuencia = [
+    document.querySelector('.qr-logo'),
+    document.querySelector('.qr-welcome'),
+    document.querySelector('.qr-hero h1'),
+    document.querySelector('.qr-intro'),
+    document.querySelector('.qr-divider'),
+    document.querySelector('.qr-btn-primary'),
+    document.querySelector('.qr-btn-secondary'),
+    document.querySelector('.qr-footer-note'),
+  ];
+
+  // Dispara cada elemento con un retardo acumulado
+  secuencia.forEach(function (el, index) {
+    if (!el) return;
+    el.classList.add('qr-hidden'); // estado inicial: invisible
+    setTimeout(function () {
+      el.classList.add('qr-visible'); // entra suavemente
+    }, 180 * index); // 180ms entre cada elemento
+  });
+
+});
